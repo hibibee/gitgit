@@ -13,6 +13,14 @@ export default function Home() {
     const newProduct = { id: ++currentProductId, ...product };
     setProducts([...products, newProduct]);
   }
+  async function getProducts() {
+    const products = await axios.get(
+      'h'
+    );
+    setProducts(products.data);
+  }
+  
+  getProducts();
 
   return (
     <>
